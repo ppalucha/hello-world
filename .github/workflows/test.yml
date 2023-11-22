@@ -8,4 +8,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ toJson(github) }}
+      - run: |
+          cat <<EOF
+          ${{ toJson(github) }}
+          EOF
