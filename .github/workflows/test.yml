@@ -1,0 +1,11 @@
+name: Test
+
+on:
+  pull_request_review:
+    types: [submitted]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ toJson(github) }}
